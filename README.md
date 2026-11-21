@@ -47,6 +47,17 @@ python check_social_story.py "content/scenes/*.json"
 git config core.hooksPath .githooks
 ```
 
+## 克隆（给 B）
+
+```bash
+git clone https://github.com/yishaesd/social-story-generator.git
+cd social-story-generator
+git config core.hooksPath .githooks   # 必做，否则提交前的机检钩子不生效
+```
+
+国内网络下 github.com:443 可能连不上，给 git 挂本地代理（端口按自己客户端改）：
+`git config http.https://github.com.proxy http://127.0.0.1:7892`
+
 ## 目录
 
 ```
