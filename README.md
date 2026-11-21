@@ -1,4 +1,4 @@
-﻿# 社交故事器 · Hack4Good
+# 社交故事器 · Hack4Good
 
 家长填三个变量（谁陪、什么时候、在哪里），选一个场景，生成一本 **6 页的社交故事**，
 一页一句、一页一图，可以念给孩子听。
@@ -74,11 +74,21 @@ git config core.hooksPath .githooks   # 必做，否则提交前的机检钩子�
 content/          规则唯一真相源 + 四个场景模板 + 生图提示词
 content/schema.md 数据契约（B 照着这个渲染）
 docs/             设计与分工、A 的执行手册、Qoder 任务包、答辩脚本
+docs/qoder/       Qoder 生图的原始产出与退回记录（过程材料，答辩用）
 shots/            图片资产，shots/<场景>/01..06.webp（1024x730，水印已裁）
-tools/            crop_watermark.py：统一裁掉生图工具烘焙的底部水印条
+tools/            crop_watermark.py（裁水印）、import_qoder_raw.py（导回 Qoder 原始产出）、shot.html（截图工装）
 samples/          一好一坏两份样例（给人看"什么算过"）
 src/              前端代码（原生 ES module，无构建）：app.js / style.css / validate.js / scenes.js
 ```
+
+### 过程材料（`docs/qoder/`）
+
+24 张图是 Qoder 会话里一张一张出的，中间退回重出过二十来次。这些原始版本都留着，回答"图是怎么来的、改了几轮"时直接翻：
+
+- `originals/` —— 62 张原始出图（转 webp 压缩，保留原文件名 `<场景>_<页号>_<时间戳>_<hash>`；同页号多个文件＝被退回的版本）。
+- `日志.md` —— 逐场景的退回记录表（问题 → 处理）、四条沉淀下来的硬规则、生图环境踩坑（水印、429 限流）。
+- `session-2026-11-21.webp` —— Qoder 交活时的收尾清单截图。
+
 
 ### 图片资产约定
 
