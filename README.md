@@ -1,4 +1,4 @@
-# 社交故事器 · Hack4Good
+﻿# 社交故事器 · Hack4Good
 
 家长填三个变量（谁陪、什么时候、在哪里），选一个场景，生成一本 **6 页的社交故事**，
 一页一句、一页一图，可以念给孩子听。
@@ -41,6 +41,16 @@ python check_social_story.py "content/scenes/*.json"
 # 合计 ERROR 0 条
 ```
 
+跑起来（前端是纯静态的，必须用本地服务器打开，`file://` 读不了 JSON）：
+
+```bash
+python -m http.server 8000
+# 浏览器开 http://127.0.0.1:8000/index.html
+# 手机上开 http://<电脑的局域网 IP>:8000/index.html
+```
+
+五个界面：列表 → 选场景 →（填四个空 / 直接读）→ 阅读器（点左半屏上一页、右半屏下一页，支持左右滑）→ 演示模式（自动翻页 + 开头那个"提醒"卡片）→ 书架（存过的故事，localStorage）。
+
 装 git 钩子（提交前自动跑机检，不过就拦下）：
 
 ```bash
@@ -67,7 +77,7 @@ docs/             设计与分工、A 的执行手册、Qoder 任务包、答辩
 shots/            图片资产，shots/<场景>/01..06.webp（1024x730，水印已裁）
 tools/            crop_watermark.py：统一裁掉生图工具烘焙的底部水印条
 samples/          一好一坏两份样例（给人看"什么算过"）
-src/              B 的代码（技术栈未定）
+src/              前端代码（原生 ES module，无构建）：app.js / style.css / validate.js / scenes.js
 ```
 
 ### 图片资产约定
@@ -87,7 +97,7 @@ src/              B 的代码（技术栈未定）
 - [x] 四个场景模板通过机检（ERROR 0）
 - [x] 24 条生图提示词
 - [x] 24 张图生成并筛选（medication / injection / haircut / kindergarten 各 6 张已入库）
-- [ ] 阅读器 / 列表 / 书架 / 演示模式
+- [x] 列表 / 阅读器 / 自定义填空 / 书架 / 演示模式（index.html + src/）
 - [ ] 部署 + 手机真机测试
 - [ ] 答辩排练
 
