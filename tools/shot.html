@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>截图工装 · 390px 手机视口</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #dcd3c4; }
+  iframe { display: block; width: 390px; height: 820px; border: 0; background: #fff; }
+</style>
+</head>
+<body>
+<!-- 用法：chrome --headless=old --window-size=390,900 --screenshot=out.png "http://127.0.0.1:8000/tools/shot.html?h=/read/medication"
+     为什么不用 --window-size 直接截 index.html：新版 headless 会忽略 window-size，视口会变成 ~500px 宽。 -->
+<script>
+  const h = new URLSearchParams(location.search).get("h") || "/list";
+  const f = document.createElement("iframe");
+  f.src = "../index.html#" + h;
+  document.body.appendChild(f);
+</script>
+</body>
+</html>

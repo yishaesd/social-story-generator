@@ -110,7 +110,7 @@ function varsSummary(scene, vars) {
 
 // ---------------- 路由 ----------------
 function currentRoute() {
-  const raw = location.hash.replace(/^#\/?/, "");
+  const raw = location.hash.replace(/^#\/?/, "").split("?")[0];
   const [name, arg] = raw.split("/");
   return { name: name || "list", arg };
 }
@@ -306,6 +306,13 @@ function viewReader(sceneId) {
   }
   const scene = app.scenes[story.sceneId];
   setTopbar(scene.name, { back: `#/custom/${story.sceneId}` });
+
+  // 支持 #/read/kindergarten?p=4 直接翻到某页（截图、答辩跳页用）
+  const pm = location.hash.match(/[?&]p=(\d+)/);
+  if (pm) {
+    const n = parseInt(pm[1], 10) - 1;
+    app.index = Math.min(Math.max(0, n), story.pages.length - 1);
+  }
 
   const wrap = h(`<div></div>`);
   const title = h(`<p class="reader-title">${esc(story.title)}<small>${esc(varsSummary(scene, story.vars))}</small></p>`);
