@@ -64,10 +64,18 @@ git config core.hooksPath .githooks   # 必做，否则提交前的机检钩子�
 content/          规则唯一真相源 + 四个场景模板 + 生图提示词
 content/schema.md 数据契约（B 照着这个渲染）
 docs/             设计与分工、A 的执行手册、Qoder 任务包、答辩脚本
-shots/            图片资产，shots/<场景>/01..06.webp
+shots/            图片资产，shots/<场景>/01..06.webp（1024x730，水印已裁）
+tools/            crop_watermark.py：统一裁掉生图工具烘焙的底部水印条
 samples/          一好一坏两份样例（给人看"什么算过"）
 src/              B 的代码（技术栈未定）
 ```
+
+### 图片资产约定
+
+- 全部 1024×730（4:3 去掉底部 38px），渲染时按 4:3 容器 `object-fit: cover` 裁切。
+- 水印由 `python tools/crop_watermark.py` 统一裁掉；原图备份在仓库外的 `_shots_orig/`，不提交。
+- 孩子固定形象：齐耳黑短发、明黄色连帽卫衣、深蓝色长裤、白色球鞋，简化绘本脸。
+- 成年人只出背影/侧影，**头部不入画**（避免"没有五官的空白脸"）。
 
 ## 四个场景
 
@@ -78,7 +86,7 @@ src/              B 的代码（技术栈未定）
 - [x] 规则 R1-R6 落地（`content/rules.json`）
 - [x] 四个场景模板通过机检（ERROR 0）
 - [x] 24 条生图提示词
-- [ ] 24 张图生成并筛选
+- [x] 24 张图生成并筛选（medication / injection / haircut / kindergarten 各 6 张已入库）
 - [ ] 阅读器 / 列表 / 书架 / 演示模式
 - [ ] 部署 + 手机真机测试
 - [ ] 答辩排练
