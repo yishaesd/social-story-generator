@@ -1,0 +1,57 @@
+{
+  "id": "haircut",
+  "name": "理发",
+  "audience": "4-8",
+  "voice": "first",
+  "image_pool": "shots/haircut",
+  "duration_sec": 60,
+  "title": "{when}，我要去剪头发",
+
+  "slots": {
+    "child": { "label": "孩子小名", "default": "宝宝", "max": 4 },
+    "who": { "label": "谁陪着", "default": "妈妈", "max": 3 },
+    "when": { "label": "什么时候", "default": "下午三点", "max": 6 },
+    "where": { "label": "在哪里", "default": "理发店", "max": 4 }
+  },
+
+  "pages": [
+    {
+      "text": "{when}，{who}带我去理发店。",
+      "type": "descriptive",
+      "img": "01.webp",
+      "alt": "成年人推开理发店的玻璃门，孩子跟在旁边"
+    },
+    {
+      "text": "店里的椅子会升高，我坐上去。",
+      "type": "descriptive",
+      "img": "02.webp",
+      "alt": "理发椅的扶手旁有一个升降踏板，孩子刚坐上椅子"
+    },
+    {
+      "text": "围布擦到我的脖子，有点痒。",
+      "type": "perspective",
+      "img": "03.webp",
+      "alt": "成年人把围布系在孩子颈前，孩子缩了一下脖子"
+    },
+    {
+      "text": "剪刀在我耳边响，我抓着椅子。",
+      "type": "descriptive",
+      "img": "04.webp",
+      "alt": "一只手举着剪刀在孩子耳边，孩子双手抓住椅子扶手"
+    },
+    {
+      "text": "我可以数三下，等它剪完。",
+      "type": "directive",
+      "img": "05.webp",
+      "alt": "孩子伸出一只手，竖起三根手指"
+    },
+    {
+      "text": "剪完以后，头发短短的。",
+      "type": "affirmative",
+      "img": "06.webp",
+      "alt": "孩子站在镜子前，头发变短，表情放松"
+    }
+  ],
+
+  "_note": "worst-case：全篇最长 15 字。剪刀只画一只手，不画正脸特写，避免压迫感。"
+}

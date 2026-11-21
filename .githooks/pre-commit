@@ -1,0 +1,25 @@
+#!/bin/sh
+# 提交前拦一道：内容机检不过就不许提交。
+# 启用：git config core.hooksPath .githooks
+# 临时跳过：git commit --no-verify
+
+if ! command -v python >/dev/null 2>&1; then
+  echo "[pre-commit] 找不到 python，跳过内容机检。"
+  exit 0
+fi
+
+OUT=$(python check_social_story.py "content/scenes/*.json" 2>&1)
+CODE=$?
+
+if [ $CODE -ne 0 ]; then
+  echo ""
+  echo "[pre-commit] 内容机检没过，提交已拦下："
+  echo ""
+  echo "$OUT" | tail -n 25
+  echo ""
+  echo "[pre-commit] 改完再提交。只想跳过这一道：git commit --no-verify"
+  exit 1
+fi
+
+echo "[pre-commit] 内容机检通过（ERROR 0）。"
+exit 0

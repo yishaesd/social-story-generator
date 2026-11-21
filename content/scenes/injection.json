@@ -1,0 +1,57 @@
+{
+  "id": "injection",
+  "name": "打针",
+  "audience": "4-8",
+  "voice": "first",
+  "image_pool": "shots/injection",
+  "duration_sec": 60,
+  "title": "{when}，我要去打针",
+
+  "slots": {
+    "child": { "label": "孩子小名", "default": "宝宝", "max": 4 },
+    "who": { "label": "谁陪着", "default": "妈妈", "max": 3 },
+    "when": { "label": "什么时候", "default": "上午十点", "max": 6 },
+    "where": { "label": "在哪里", "default": "医院", "max": 4 }
+  },
+
+  "pages": [
+    {
+      "text": "{when}，{who}带我去医院。",
+      "type": "descriptive",
+      "img": "01.webp",
+      "alt": "成年人牵着孩子的手，走进医院大门"
+    },
+    {
+      "text": "医院里有一位穿白衣的护士。",
+      "type": "descriptive",
+      "img": "02.webp",
+      "alt": "白衣护士站在诊室门口，侧身，手里拿着托盘"
+    },
+    {
+      "text": "我坐在椅子上，手心里有汗。",
+      "type": "perspective",
+      "img": "03.webp",
+      "alt": "孩子坐在诊室的椅子上，双手放在膝盖上"
+    },
+    {
+      "text": "{who}握住我的手，护士动作很轻。",
+      "type": "descriptive",
+      "img": "04.webp",
+      "alt": "成年人握住孩子的手，护士的侧影在画面右侧"
+    },
+    {
+      "text": "我可以看着{who}的眼睛，数到三。",
+      "type": "directive",
+      "img": "05.webp",
+      "alt": "孩子抬头看向身侧的成年人"
+    },
+    {
+      "text": "打完了，我坐着休息一会儿。",
+      "type": "affirmative",
+      "img": "06.webp",
+      "alt": "孩子坐在椅子上，肩膀放松，手背上贴着一小块胶布"
+    }
+  ],
+
+  "_note": "worst-case：全篇最长 15 字。图一律画动作不画身份，成年人只给背影或侧影。"
+}

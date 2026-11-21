@@ -1,0 +1,57 @@
+{
+  "id": "kindergarten",
+  "name": "上幼儿园",
+  "audience": "4-8",
+  "voice": "first",
+  "image_pool": "shots/kindergarten",
+  "duration_sec": 60,
+  "title": "{when}，我要去幼儿园",
+
+  "slots": {
+    "child": { "label": "孩子小名", "default": "宝宝", "max": 4 },
+    "who": { "label": "谁陪着", "default": "妈妈", "max": 3 },
+    "when": { "label": "什么时候", "default": "早上八点", "max": 6 },
+    "where": { "label": "在哪里", "default": "幼儿园", "max": 4 }
+  },
+
+  "pages": [
+    {
+      "text": "{when}，{who}和我走到园门口。",
+      "type": "descriptive",
+      "img": "01.webp",
+      "alt": "成年人和孩子并排走在幼儿园围墙外的小路上"
+    },
+    {
+      "text": "门口有位老师在等我。",
+      "type": "descriptive",
+      "img": "02.webp",
+      "alt": "一位老师站在门口，弯着腰，双手放在身前"
+    },
+    {
+      "text": "我抓着{who}的手，不想进去。",
+      "type": "perspective",
+      "img": "03.webp",
+      "alt": "孩子两只手抓住成年人的手，身体略微向后靠"
+    },
+    {
+      "text": "{who}蹲下来，说放学就来接我。",
+      "type": "descriptive",
+      "img": "04.webp",
+      "alt": "成年人蹲在孩子面前，一只手放在孩子肩上"
+    },
+    {
+      "text": "我可以跟老师说早上好，再进教室。",
+      "type": "directive",
+      "img": "05.webp",
+      "alt": "孩子站在教室门口，抬头看向老师"
+    },
+    {
+      "text": "放学的时候，{who}会来接我。",
+      "type": "affirmative",
+      "img": "06.webp",
+      "alt": "教室窗边挂着一只小书包，阳光照进来"
+    }
+  ],
+
+  "_note": "worst-case：全篇最长 16 字。第6页画空场景（书包+阳光），给孩子留出想象空间，也让家长能停在「会来接我」这句上。"
+}

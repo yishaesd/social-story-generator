@@ -1,0 +1,57 @@
+{
+  "id": "medication",
+  "name": "吃药",
+  "audience": "4-8",
+  "voice": "first",
+  "image_pool": "shots/medication",
+  "duration_sec": 60,
+  "title": "{when}，我要吃药",
+
+  "slots": {
+    "child": { "label": "孩子小名", "default": "宝宝", "max": 4 },
+    "who": { "label": "谁陪着", "default": "妈妈", "max": 3 },
+    "when": { "label": "什么时候", "default": "早上七点", "max": 6 },
+    "where": { "label": "在哪里", "default": "桌前", "max": 4 }
+  },
+
+  "pages": [
+    {
+      "text": "{when}，{who}把水杯放在{where}。",
+      "type": "descriptive",
+      "img": "01.webp",
+      "alt": "家长把一杯水放在孩子面前的桌上"
+    },
+    {
+      "text": "桌上有一颗白白的小药片。",
+      "type": "descriptive",
+      "img": "02.webp",
+      "alt": "桌上一颗白色小药片和水杯"
+    },
+    {
+      "text": "我坐在{where}，心里有点不想吃。",
+      "type": "perspective",
+      "img": "03.webp",
+      "alt": "孩子坐在桌前，低头看着药片"
+    },
+    {
+      "text": "{who}蹲下来，摸摸我的头。",
+      "type": "descriptive",
+      "img": "04.webp",
+      "alt": "家长蹲下来，一只手放在孩子头顶"
+    },
+    {
+      "text": "我可以先喝一口水，再放药。",
+      "type": "directive",
+      "img": "05.webp",
+      "alt": "孩子端着水杯喝一口水"
+    },
+    {
+      "text": "咽下去，只要一下。",
+      "type": "affirmative",
+      "img": "06.webp",
+      "alt": "孩子抬起头，表情放松"
+    }
+  ],
+
+  "_note": "worst-case 检查：把每个 slot 按 max 填满再算字数，medication 全篇最长 18 字，留了 4 字余量给家长输入。"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "scene-01-bad",
+  "title": "关于按时服药这件事的一些说明",
+  "audience": "6 岁",
+  "voice": "first",
+  "pages": [
+    { "text": "你应该每天按时吃药，因为只有坚持服药才能让身体尽快恢复健康。", "type": "descriptive", "img": "shots/scene-01/01.webp" },
+    { "text": "你必须记住，吃药是很重要的事情。", "type": "directive", "img": "shots/scene-01/02.webp" },
+    { "text": "乖孩子都要勇敢地把药吃完。", "type": "directive", "img": "shots/scene-01/03.webp" },
+    { "text": "我们相信坚持就是胜利。", "type": "affirmative" },
+    { "text": "请把药放在固定的地方，不要忘记。", "type": "directive", "img": "shots/scene-01/04.webp" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "scene-01",
+  "title": "早上，我要吃药",
+  "audience": "6 岁，第一次学着自己吃药",
+  "voice": "first",
+  "pages": [
+    { "text": "早上七点，妈妈把水杯放在桌上。", "type": "descriptive", "img": "shots/scene-01/01.webp" },
+    { "text": "桌上有一颗白色的小药片。", "type": "descriptive", "img": "shots/scene-01/02.webp" },
+    { "text": "我坐在桌前，嘴巴闭得紧紧的。", "type": "perspective", "img": "shots/scene-01/03.webp" },
+    { "text": "妈妈蹲下来，说吃了药喉咙不疼。", "type": "descriptive", "img": "shots/scene-01/04.webp" },
+    { "text": "我可以先喝一口水，再把药片放进嘴里。", "type": "directive", "img": "shots/scene-01/05.webp" },
+    { "text": "咽下去只要一下，妈妈摸了摸我的头。", "type": "affirmative", "img": "shots/scene-01/06.webp" }
+  ]
+}

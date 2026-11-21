@@ -1,0 +1,30 @@
+# 依赖与构建产物
+node_modules/
+dist/
+.vite/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# 日志与临时文件
+*.log
+*.tmp
+.tmp/
+check-result.txt
+
+# 本地私人东西
+.env
+.env.local
+
+# 中间产物：原图与导出
+shots/_raw/
+shots/_rejected/
