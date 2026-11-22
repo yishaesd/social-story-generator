@@ -1,0 +1,57 @@
+{
+  "id": "line",
+  "name": "排队打饭",
+  "audience": "6-10",
+  "voice": "first",
+  "image_pool": "shots/line",
+  "duration_sec": 60,
+  "title": "{when}，我去食堂排队",
+
+  "slots": {
+    "child": { "label": "孩子小名", "default": "宝宝", "max": 4 },
+    "who": { "label": "谁陪着", "default": "妈妈", "max": 3 },
+    "when": { "label": "什么时候", "default": "中午", "max": 6 },
+    "where": { "label": "在哪里", "default": "食堂", "max": 6 }
+  },
+
+  "pages": [
+    {
+      "text": "{when}，{who}带我去食堂。",
+      "type": "descriptive",
+      "img": "01.webp",
+      "alt": "成年人牵着孩子走进食堂门口"
+    },
+    {
+      "text": "我端着碗，排在同学后面。",
+      "type": "descriptive",
+      "img": "02.webp",
+      "alt": "孩子端着碗站在队伍后面，前面站着几个同学"
+    },
+    {
+      "text": "队伍很长，我站着等。",
+      "type": "perspective",
+      "img": "03.webp",
+      "alt": "孩子站在队伍中间，双手端着碗，前面还有几个人"
+    },
+    {
+      "text": "我可以数一数前面的人。",
+      "type": "directive",
+      "img": "04.webp",
+      "alt": "孩子端着碗，眼睛看着前面的同学，嘴里在数数"
+    },
+    {
+      "text": "轮到我，我指着想要的菜。",
+      "type": "descriptive",
+      "img": "05.webp",
+      "alt": "孩子站在餐台前，用一根手指着玻璃柜里的菜"
+    },
+    {
+      "text": "端好碗，我慢慢走回座位。",
+      "type": "affirmative",
+      "img": "06.webp",
+      "alt": "孩子双手端着碗，慢慢走向座位"
+    }
+  ],
+
+  "_note": "食堂排队＝等待 + 人群密度。给的替代动作是「数前面的人」，比「耐心等」具体，孩子真做得到。"
+}

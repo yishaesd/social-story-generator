@@ -1,0 +1,57 @@
+{
+  "id": "askhelp",
+  "name": "找老师帮忙",
+  "audience": "6-10",
+  "voice": "first",
+  "image_pool": "shots/askhelp",
+  "duration_sec": 60,
+  "title": "我找不到教室，就找{who}",
+
+  "slots": {
+    "child": { "label": "孩子小名", "default": "宝宝", "max": 4 },
+    "who": { "label": "找谁帮忙", "default": "老师", "max": 3 },
+    "when": { "label": "什么时候", "default": "课间", "max": 6 },
+    "where": { "label": "在哪里", "default": "走廊", "max": 6 }
+  },
+
+  "pages": [
+    {
+      "text": "{when}，我在走廊里走。",
+      "type": "descriptive",
+      "img": "01.webp",
+      "alt": "孩子背着书包走在学校的走廊里"
+    },
+    {
+      "text": "我找不到自己的教室。",
+      "type": "perspective",
+      "img": "02.webp",
+      "alt": "孩子站在走廊中间，两侧是一模一样的教室门"
+    },
+    {
+      "text": "心里有点慌，我停下来。",
+      "type": "perspective",
+      "img": "03.webp",
+      "alt": "孩子停住脚步，双手抓着书包带子"
+    },
+    {
+      "text": "我可以找穿校服的{who}问路。",
+      "type": "directive",
+      "img": "04.webp",
+      "alt": "孩子抬头看向一位成年人，成年人只露出肩膀和手臂"
+    },
+    {
+      "text": "{who}指着一扇门，带我走过去。",
+      "type": "descriptive",
+      "img": "05.webp",
+      "alt": "成年人的手指向走廊尽头的一扇门，孩子跟在她身边"
+    },
+    {
+      "text": "找到教室，我坐回椅子上。",
+      "type": "affirmative",
+      "img": "06.webp",
+      "alt": "孩子坐在教室的椅子上，把书包放在桌边"
+    }
+  ],
+
+  "_note": "求助是自闭症孩子最容易卡住的一步：不是不会说，是不知道该找谁、什么时候开口。第 4 页把「找谁」写死成「穿校服的大人」。"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "restaurant",
+  "name": "等上菜",
+  "audience": "4-8",
+  "voice": "first",
+  "image_pool": "shots/restaurant",
+  "duration_sec": 60,
+  "title": "{when}，我要等菜来",
+
+  "slots": {
+    "child": { "label": "孩子小名", "default": "宝宝", "max": 4 },
+    "who": { "label": "谁陪着", "default": "妈妈", "max": 3 },
+    "when": { "label": "什么时候", "default": "中午", "max": 6 },
+    "where": { "label": "在哪里", "default": "饭馆", "max": 4 }
+  },
+
+  "pages": [
+    {
+      "text": "{when}，{who}带我去饭馆吃饭。",
+      "type": "descriptive",
+      "img": "01.webp",
+      "alt": "成年人牵着孩子走进饭馆的玻璃门"
+    },
+    {
+      "text": "我们坐下，菜要等一会儿才来。",
+      "type": "descriptive",
+      "img": "02.webp",
+      "alt": "孩子和成年人对坐在餐桌两侧，桌上摆着空盘子和水杯"
+    },
+    {
+      "text": "闻到香味，我有点等不及了。",
+      "type": "perspective",
+      "img": "03.webp",
+      "alt": "孩子探身闻旁边桌上的菜，表情有点着急"
+    },
+    {
+      "text": "我可以先喝一口水，再看看菜单。",
+      "type": "directive",
+      "img": "04.webp",
+      "alt": "孩子坐在桌边喝杯子里的水，面前摊着一本菜单"
+    },
+    {
+      "text": "等的时候，{who}就坐在我旁边。",
+      "type": "descriptive",
+      "img": "05.webp",
+      "alt": "成年人坐在孩子旁边，只露出肩膀和手臂，孩子抬头看过去"
+    },
+    {
+      "text": "菜来了，我坐好，慢慢吃。",
+      "type": "affirmative",
+      "img": "06.webp",
+      "alt": "桌上摆着几盘菜，孩子拿好筷子坐端正"
+    }
+  ],
+
+  "_note": "第五个场景：等上菜（等待与忍耐）。和前面四个不重叠——不是医疗、不是身体被摆布、不是分离，而是「大人说话、菜还没来」这种最日常的熬时间。"
+}

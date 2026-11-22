@@ -1,0 +1,57 @@
+{
+  "id": "arrival",
+  "name": "进校门",
+  "audience": "6-10",
+  "voice": "first",
+  "image_pool": "shots/arrival",
+  "duration_sec": 60,
+  "title": "{when}，我走进校门",
+
+  "slots": {
+    "child": { "label": "孩子小名", "default": "宝宝", "max": 4 },
+    "who": { "label": "谁送我", "default": "妈妈", "max": 3 },
+    "when": { "label": "什么时候", "default": "早上", "max": 6 },
+    "where": { "label": "在哪所学校", "default": "学校", "max": 6 }
+  },
+
+  "pages": [
+    {
+      "text": "{when}，{who}送我到校门口。",
+      "type": "descriptive",
+      "img": "01.webp",
+      "alt": "成年人牵着孩子走到学校门口，成年人只露出背影和手臂"
+    },
+    {
+      "text": "我自己往校门里走。",
+      "type": "descriptive",
+      "img": "02.webp",
+      "alt": "孩子背着书包独自走进校门，成年人站在门外"
+    },
+    {
+      "text": "早上人多，我站在门口，有点紧张。",
+      "type": "perspective",
+      "img": "03.webp",
+      "alt": "孩子站在校门口，周围有别的小朋友走进校门"
+    },
+    {
+      "text": "我可以慢慢走，跟着前面的人。",
+      "type": "directive",
+      "img": "04.webp",
+      "alt": "孩子跟在队伍后面，一步一步往前走"
+    },
+    {
+      "text": "到了教室，我坐下，把书包放好。",
+      "type": "descriptive",
+      "img": "05.webp",
+      "alt": "孩子坐在教室的椅子上，把书包放在桌边"
+    },
+    {
+      "text": "坐好以后，我心里踏实了。",
+      "type": "affirmative",
+      "img": "06.webp",
+      "alt": "孩子坐端正，双手放在桌上，表情放松"
+    }
+  ],
+
+  "_note": "上学第一本：进校门。难点在「和大人分开」+「人多」，所以第 3 页先承认紧张，第 4 页给一个能做的动作（跟着走），不写「不要怕」。"
+}

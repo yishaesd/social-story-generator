@@ -1,0 +1,57 @@
+{
+  "id": "handup",
+  "name": "举手说话",
+  "audience": "6-10",
+  "voice": "first",
+  "image_pool": "shots/handup",
+  "duration_sec": 60,
+  "title": "上课时，我想说话",
+
+  "slots": {
+    "child": { "label": "孩子小名", "default": "宝宝", "max": 4 },
+    "who": { "label": "谁在讲台上", "default": "老师", "max": 3 },
+    "when": { "label": "什么时候", "default": "上午", "max": 6 },
+    "where": { "label": "在哪里", "default": "教室", "max": 6 }
+  },
+
+  "pages": [
+    {
+      "text": "上课的时候，{who}在讲台上说话。",
+      "type": "descriptive",
+      "img": "01.webp",
+      "alt": "老师站在讲台上说话，孩子在座位上看着她"
+    },
+    {
+      "text": "我有话想说，心里有点急。",
+      "type": "perspective",
+      "img": "02.webp",
+      "alt": "孩子坐在椅子上，嘴巴微微张开，手放在桌上"
+    },
+    {
+      "text": "我可以先举手，等{who}叫我。",
+      "type": "directive",
+      "img": "03.webp",
+      "alt": "孩子把一只手举起来，另一只手放在桌上"
+    },
+    {
+      "text": "{who}看着我，说「请讲」。",
+      "type": "descriptive",
+      "img": "04.webp",
+      "alt": "老师站在讲台边，朝孩子的方向看，手做出请的动作"
+    },
+    {
+      "text": "说完以后，我心里轻了。",
+      "type": "perspective",
+      "img": "05.webp",
+      "alt": "孩子坐回椅子，肩膀放松，脸上有一点笑"
+    },
+    {
+      "text": "举一次手，我说一句心里话。",
+      "type": "affirmative",
+      "img": "06.webp",
+      "alt": "孩子举起一只手，教室的窗光落在桌上"
+    }
+  ],
+
+  "_note": "课堂里最常被压住的动作是「插嘴」。规则不是「不许说话」，而是给一个替代动作：先举手。第 3 页是引导句，唯一一页指令型。"
+}

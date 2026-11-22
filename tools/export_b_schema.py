@@ -1,4 +1,4 @@
-"""把本仓库的场景（content/scenes/*.json + shots/）导出成 B 那套内容契约。
+﻿"""把本仓库的场景（content/scenes/*.json + shots/）导出成 B 那套内容契约。
 
 B 的契约（见 content/README.md）：
   stories/<id>.json      字段 id / order / title / coverImage / defaults / pages[]
@@ -38,7 +38,7 @@ TYPE_MAP = {
     "describe": "describe",
 }
 
-ORDER = ["medication", "injection", "haircut", "kindergarten"]
+ORDER = ["medication", "injection", "haircut", "kindergarten", "restaurant", "arrival", "handup", "line", "askhelp"]
 
 
 def fill(text, vars_):
@@ -68,6 +68,11 @@ def square(path, target, bg=(251, 247, 240)):
     canvas.paste(im, (dx, dy))
     canvas.save(target, "PNG", optimize=True)
     return canvas.size
+
+
+def blank(target, size=1024, paper=(248, 243, 234)):
+    Image.new("RGB", (size, size), paper).save(target, "PNG", optimize=True)
+    return size
 
 
 def mean_color(strip):
@@ -106,8 +111,11 @@ def main():
         pages = []
         for i, page in enumerate(scene["pages"], start=1):
             name = "%02d.png" % i
-            square(os.path.join(REPO, scene["image_pool"], page["img"]),
-                   os.path.join(dst_assets, name))
+            src_img = os.path.join(REPO, scene["image_pool"], page["img"])
+            if os.path.exists(src_img):
+                square(src_img, os.path.join(dst_assets, name))
+            else:  # 图还没出：放一张纸色占位，别让加载器 404
+                blank(os.path.join(dst_assets, name))
             pages.append({
                 "type": TYPE_MAP.get(page["type"], "describe"),
                 "text": fill(page["text"], bake).replace("{who}", "{companion}"),
