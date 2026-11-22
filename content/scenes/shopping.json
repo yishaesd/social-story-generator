@@ -1,0 +1,57 @@
+{
+  "id": "shopping",
+  "name": "买东西",
+  "audience": "6-10",
+  "voice": "first",
+  "image_pool": "shots/shopping",
+  "duration_sec": 60,
+  "title": "{when}，我去买东西",
+
+  "slots": {
+    "child": { "label": "孩子小名", "default": "宝宝", "max": 4 },
+    "who": { "label": "谁带我去", "default": "妈妈", "max": 3 },
+    "when": { "label": "什么时候", "default": "下午三点", "max": 6 },
+    "where": { "label": "在哪里买", "default": "小卖部", "max": 6 }
+  },
+
+  "pages": [
+    {
+      "text": "{when}，{who}带我去{where}。",
+      "type": "descriptive",
+      "img": "01.webp",
+      "alt": "成年人和孩子走到小卖部门口，成年人只露出背影和手臂"
+    },
+    {
+      "text": "货架上有饼干和酸奶。",
+      "type": "descriptive",
+      "img": "02.webp",
+      "alt": "货架上摆着饼干盒和酸奶，孩子的视线高度"
+    },
+    {
+      "text": "我想拿那包饼干。",
+      "type": "perspective",
+      "img": "03.webp",
+      "alt": "孩子伸出一只手，手停在一包饼干前面"
+    },
+    {
+      "text": "我可以先问{who}，这个能买吗。",
+      "type": "directive",
+      "img": "04.webp",
+      "alt": "孩子抬头看向成年人，成年人只露出身体一侧"
+    },
+    {
+      "text": "到柜台，{who}把钱递过去。",
+      "type": "descriptive",
+      "img": "05.webp",
+      "alt": "成年人在柜台前付钱，孩子站在旁边"
+    },
+    {
+      "text": "我拿着饼干，一起回家。",
+      "type": "affirmative",
+      "img": "06.webp",
+      "alt": "孩子双手拿着那包饼干走在路上，表情放松"
+    }
+  ],
+
+  "_note": "买东西的难点是「想要」和「能不能拿」之间那一步：不是不许要，而是先问一句。第 4 页是唯一引导句。"
+}

@@ -1,4 +1,4 @@
-// 场景清单：内容侧新增场景时，这里加一行即可（顺序＝列表页顺序）
+﻿// 场景清单：内容侧新增场景时，这里加一行即可（顺序＝列表页顺序）
 export const SCENE_IDS = [
   "medication",
   "injection",
@@ -9,4 +9,5 @@ export const SCENE_IDS = [
   "handup",
   "line",
   "askhelp",
+  "shopping",
 ];

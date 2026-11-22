@@ -38,7 +38,7 @@ TYPE_MAP = {
     "describe": "describe",
 }
 
-ORDER = ["medication", "injection", "haircut", "kindergarten", "restaurant", "arrival", "handup", "line", "askhelp"]
+ORDER = ["medication", "injection", "haircut", "kindergarten", "restaurant", "arrival", "handup", "line", "askhelp", "shopping"]
 
 
 def fill(text, vars_):
