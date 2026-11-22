@@ -168,10 +168,10 @@ function setTopbar(title, { back = null, sub = "" } = {}) {
 
 // ---------------- 列表 ----------------
 function viewList() {
-  setTopbar("社交故事器", { sub: "4 个场景" });
+  setTopbar("社交故事器", { sub: `${SCENE_IDS.length} 个场景` });
   const wrap = h(`<div></div>`);
   wrap.appendChild(
-    h(`<p class="lead">孩子怕的不是医院，是"不知道接下来会发生什么"。<br>选一个场景，填上孩子的小名，六页读完。</p>`)
+    h(`<p class="lead">孩子怕的不是医院和学校，是"不知道接下来会发生什么"。<br>选一个场景，填上孩子的小名，六页读完。</p>`)
   );
   for (const id of SCENE_IDS) {
     const scene = app.scenes[id];
@@ -183,6 +183,13 @@ function viewList() {
           <div class="desc">${esc(scene.audience)} 岁 · 约 ${Math.round(scene.duration_sec)} 秒 · ${scene.pages.length} 页</div>
         </div>
       </div>`);
+    const img = card.querySelector("img");
+    img.addEventListener("error", () => {
+      img.remove();
+      const thumb = card.querySelector(".thumb");
+      thumb.classList.add("empty");
+      thumb.textContent = "图待出";
+    });
     card.addEventListener("click", () => go(`#/custom/${id}`));
     wrap.appendChild(card);
   }
