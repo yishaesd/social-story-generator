@@ -74,7 +74,7 @@ git config core.hooksPath .githooks   # 必做，否则提交前的机检钩子�
 
 ## 文档
 
-- docs/agent-设计.md —— 面向 12–18 岁自闭症青少年的辅助 agent 设计（卡片式、人审在前、安全红线）
+- docs/agent-设计.md —— 面向 16–18 岁自闭症青少年的辅助 agent 设计（卡片式、人审在前、安全红线）
 
 ## 目录
 
