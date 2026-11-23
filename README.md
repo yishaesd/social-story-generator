@@ -72,10 +72,6 @@ git config core.hooksPath .githooks   # 必做，否则提交前的机检钩子�
 国内网络下 github.com:443 可能连不上，给 git 挂本地代理（端口按自己客户端改）：
 `git config http.https://github.com.proxy http://127.0.0.1:7892`
 
-## 文档
-
-- docs/agent-设计.md —— 面向 16–18 岁自闭症青少年的辅助 agent 设计（卡片式、人审在前、安全红线）
-
 ## 目录
 
 ```
